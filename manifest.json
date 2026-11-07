@@ -1,0 +1,14 @@
+{
+  "$schema": "https://sqrengine.com/schemas/bundle/v1.json",
+  "name": "sqr-workday-bundle",
+  "displayName": "Workday HCM & Time Off Bundle",
+  "version": "1.0.0",
+  "author": "Siliqun Rotor",
+  "license": "Apache-2.0",
+  "description": "Workday HCM Staffing & Time Off MCP tools with WID descriptor mapping, strict PII redaction, and Teach test cases.",
+  "category": "Enterprise",
+  "entryFlow": "workday_flow",
+  "toolsCount": 2,
+  "bundleSha256": "5a21e78c3b90f412d8471e98a32b1467e2190cd54fa67b819203847561829304",
+  "createdAt": "2026-11-07T00:00:00.000Z"
+}

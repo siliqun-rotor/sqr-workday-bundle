@@ -1,0 +1,47 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "workday_worker_get",
+      "description": "Get Workday worker profile by WID with strict PII redaction",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "worker_id": { "type": "string", "description": "Workday WID" }
+        },
+        "required": ["worker_id"]
+      }
+    },
+    "effect": "read",
+    "_meta": {
+      "sqr/http": {
+        "method": "GET",
+        "url": "https://api.workday.com/staffing/v1/workers/{worker_id}"
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "workday_time_off_request",
+      "description": "Submit a time off request in Workday",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "worker_id": { "type": "string", "description": "Worker WID" },
+          "start_date": { "type": "string", "description": "Start date in ISO format" },
+          "end_date": { "type": "string", "description": "End date in ISO format" },
+          "type": { "type": "string", "description": "Time off type" }
+        },
+        "required": ["worker_id", "start_date", "end_date"]
+      }
+    },
+    "effect": "act",
+    "_meta": {
+      "sqr/http": {
+        "method": "POST",
+        "url": "https://api.workday.com/timeoff/v1/workers/{worker_id}/request"
+      }
+    }
+  }
+]

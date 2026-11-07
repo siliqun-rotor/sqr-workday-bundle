@@ -1,0 +1,5 @@
+[
+  { "input": "Lookup employee details for W-20941", "expect": "workday_worker_get" },
+  { "input": "Find worker profile for Alice", "expect": "workday_worker_get" },
+  { "input": "Request PTO for next Friday", "expect": "workday_time_off_request" }
+]
